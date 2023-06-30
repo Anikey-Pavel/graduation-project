@@ -1,21 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&family=Source+Sans+Pro:wght@400;700;900&display=swap');
 @import "normolize.scss";
+@import "header.scss";
+@import "main.scss";
+@import "homePage.scss";
+@import "footer.scss";
 
+html,
 body {
-	background-color: #555555;
 	height: 100%;
-	line-height: 1;
-	font-size: 16px;
-	font-family: Montserrat;
 }
 
-.wrapper {}
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
 
-._conteiner {
-	max-width: 1085px;
-	margin: 0 auto;
-	min-height: 100%;
+.lock {
 	overflow: hidden;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.todo {
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 }

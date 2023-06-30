@@ -1,28 +1,40 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getDatabase, ref, set, onValue } from "firebase/database";
+import { firebaseConfig } from "./database";
+import { creteContaiener } from "./createPage/cresteContainer";
+import { todo } from "./createPage/cresteContainer";
+import { createHeader } from "./createPage/createHeader";
+import { createMain } from "./createPage/createMain";
+import { createFooter } from "./createPage/createFooter";
+import { createUser } from "./users/createUsers";
+import { createTask } from "./task/createTask";
+import { headerMainBlockButton } from "./createPage/createHomePage";
+import { currentTaskContainer } from "./createPage/createHomePage";
+import { changeTask } from "./task/changeTask";
+import { loginUser } from "./users/loginUser";
+import { dragNdrop } from "./task/dragNdrop";
+// import { dragNdrop2 } from "./task/dragNdrop";
+import "./style/style.scss";
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyC5ic_EBO8Wll52xtlWnN-QdUicQSO_1CM",
-    authDomain: "todo-3178c.firebaseapp.com",
-    projectId: "todo-3178c",
-    storageBucket: "todo-3178c.appspot.com",
-    messagingSenderId: "67462860135",
-    appId: "1:67462860135:web:01badb6afb05ee509773c2"
-};
-
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
-async function getCities(db) {
-    const citiesCol = collection(db, 'cities');
-    const citySnapshot = await getDocs(citiesCol);
-    const cityList = citySnapshot.docs.map(doc => doc.data());
-    return cityList;
+const initApp = () => {
+    const body = document.body;
+    creteContaiener(body);
+    createHeader(todo);
+    createMain(todo);
+    createFooter(todo);
+    createUser();
+
+    headerMainBlockButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        createTask(currentTaskContainer);
+    });
+
+    changeTask();
+    loginUser();
+    dragNdrop();
+    // dragNdrop2();
 }
 
-getCities(db);
+initApp();

@@ -1,0 +1,133 @@
+.header-main-block {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-main-block__title {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: #5C7CFA;
+    margin-right: 15px;
+}
+
+.header-main-block__input {
+    flex: 1 1 auto;
+    border-radius: 5px;
+    border: 2px solid #5C7CFA;
+    font-size: 20px;
+    color: #5C7CFA;
+    margin-right: 15px;
+    padding: 10px;
+}
+
+.header-main-block__input:focus {
+    box-shadow: 1px 1px 5px #5C7CFA;
+}
+
+.header-main-block__button {
+    background-color: inherit;
+    border-radius: 5px;
+    border: 1px solid #5C7CFA;
+    padding: 0 10px;
+    color: #5C7CFA;
+    transition: color, background-color 0.5s ease;
+}
+
+.header-main-block__button:hover {
+    background-color: #5C7CFA;
+    color: white;
+}
+
+.main-block__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.main-block__current-task {}
+
+.current-task {
+    border: 2px solid #5C7CFA;
+    border-radius: 5px;
+    flex: 1 1 50%;
+    margin-right: 20px;
+    padding: 15px;
+}
+
+.current-task__title {
+    text-align: center;
+    color: #5C7CFA;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #5C7CFA;
+}
+
+.main-block__completed-task {}
+
+.completed-task {
+    border: 2px solid #5C7CFA;
+    border-radius: 5px;
+    flex: 1 1 50%;
+    padding: 15px;
+
+}
+
+.completed-task__title {
+    text-align: center;
+    color: #5C7CFA;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #5C7CFA;
+}
+
+#current {
+    height: 100%;
+}
+
+#completed {
+    height: 100%;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #5C7CFA;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 1px 1px 5px #5C7CFA;
+}
+
+.task__name {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: #5C7CFA;
+}
+
+.task__button {
+    background-color: inherit;
+    border-radius: 5px;
+    border: 1px solid #5C7CFA;
+    padding: 0 7px;
+    color: #5C7CFA;
+    transition: color, background-color 0.5s ease;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 1px;
+}
+
+.task__button:hover {
+    background-color: #5C7CFA;
+    color: white;
+}
