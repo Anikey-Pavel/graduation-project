@@ -6,10 +6,7 @@ import { registrationAge } from "../createPage/createHeader";
 import { registrationPhone } from "../createPage/createHeader";
 import { registrationEmail } from "../createPage/createHeader";
 import { registrationButton } from "../createPage/createHeader";
-import { getDatabase, ref, set } from "firebase/database";
-import { createHomePage } from "../createPage/createHomePage";
-import { mainBlockText } from "../createPage/createMain";
-import { todoMain } from "../createPage/createMain";
+import { getDatabase, ref, set, get, child } from "firebase/database";
 
 export const createUser = () => {
 
@@ -22,7 +19,7 @@ export const createUser = () => {
         const userEmail = registrationEmail.value;
 
         const db = getDatabase();
-        set(ref(db, "users/" + `user${userName}`), {
+        set(ref(db, "users/" + userName), {
             name: userName,
             surname: userSurname,
             password: userPassword,
@@ -31,8 +28,6 @@ export const createUser = () => {
             email: userEmail,
         });
         e.preventDefault();
-        mainBlockText.remove();
-        createHomePage(todoMain);
 
         document.body.classList.remove("lock");
         formRegistration.classList.remove("open");

@@ -5,9 +5,9 @@ export const currentTaskContainer = document.createElement("div");
 export const headerMainBlockInput = document.createElement("input");
 export const mainBlockContent = document.createElement("div");
 export const completedTaskContainer = document.createElement("div");
+export const mainBlockContainer = document.createElement("div");
 
 export const createHomePage = (container) => {
-    const mainBlockContainer = document.createElement("div");
     mainBlockContainer.classList.add("main-block__container", "container");
 
     const mainBlockHeader = document.createElement("form");

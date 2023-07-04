@@ -1,30 +1,21 @@
 import { mainBlockContent } from "../createPage/createHomePage";
-import { currentTaskContainer } from "../createPage/createHomePage";
-import { completedTaskContainer } from "../createPage/createHomePage";
+import { getDatabase, remove, ref, val, get, child } from "firebase/database";
+import { loginName } from "../createPage/createHeader";
+
+const deleteTask = (login) => {
+    if (event.target.className !== "task__button") return;
+
+    const task = event.target.closest('.task');
+    const dbRef = ref(getDatabase());
+
+    remove(child(dbRef, `users/${login}/task/${task.id}`))
+
+    task.remove();
+}
 
 export const changeTask = () => {
-    mainBlockContent.addEventListener("change", (event) => {
-        if (event.target.className !== "task__checkbox") return;
-
-        const task = event.target.closest('.task');
-        const clone = task.cloneNode(true);
-
-        if (document.querySelector(".task__checkbox").checked) {
-            task.remove();
-            completedTaskContainer.prepend(clone);
-        }
-
-        if (document.querySelector(".task__checkbox").checked === false) {
-            task.remove();
-            currentTaskContainer.append(clone);
-        }
-    })
-
     mainBlockContent.addEventListener("click", (event) => {
-        if (event.target.className !== "task__button") return;
-
-        const task = event.target.closest('.task');
-
-        task.remove();
+        event.preventDefault();
+        deleteTask(loginName.value);
     })
 }

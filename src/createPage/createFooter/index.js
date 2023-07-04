@@ -1,5 +1,6 @@
+export const todoFooter = document.createElement("footer");
+
 export const createFooter = (container) => {
-    const todoFooter = document.createElement("footer");
     todoFooter.classList.add("todo__footer", "footer");
 
     const footerContainer = document.createElement("div");

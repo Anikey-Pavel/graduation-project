@@ -10,35 +10,35 @@
     font-weight: 500;
     line-height: 120%;
     letter-spacing: 1px;
-    color: #5C7CFA;
+    color: #000000;
     margin-right: 15px;
 }
 
 .header-main-block__input {
     flex: 1 1 auto;
     border-radius: 5px;
-    border: 2px solid #5C7CFA;
+    border: 2px solid #000000;
     font-size: 20px;
-    color: #5C7CFA;
+    color: #000000;
     margin-right: 15px;
     padding: 10px;
 }
 
 .header-main-block__input:focus {
-    box-shadow: 1px 1px 5px #5C7CFA;
+    box-shadow: 1px 1px 5px #000000;
 }
 
 .header-main-block__button {
     background-color: inherit;
     border-radius: 5px;
-    border: 1px solid #5C7CFA;
+    border: 1px solid #000000;
     padding: 0 10px;
-    color: #5C7CFA;
+    color: #000000;
     transition: color, background-color 0.5s ease;
 }
 
 .header-main-block__button:hover {
-    background-color: #5C7CFA;
+    background-color: #000000;
     color: white;
 }
 
@@ -51,7 +51,7 @@
 .main-block__current-task {}
 
 .current-task {
-    border: 2px solid #5C7CFA;
+    border: 2px solid #000000;
     border-radius: 5px;
     flex: 1 1 50%;
     margin-right: 20px;
@@ -60,18 +60,18 @@
 
 .current-task__title {
     text-align: center;
-    color: #5C7CFA;
+    color: #000000;
     font-size: 25px;
     font-weight: 500;
     line-height: 120%;
     letter-spacing: 1px;
-    border-bottom: 1px solid #5C7CFA;
+    border-bottom: 1px solid #000000;
 }
 
 .main-block__completed-task {}
 
 .completed-task {
-    border: 2px solid #5C7CFA;
+    border: 2px solid #000000;
     border-radius: 5px;
     flex: 1 1 50%;
     padding: 15px;
@@ -80,12 +80,12 @@
 
 .completed-task__title {
     text-align: center;
-    color: #5C7CFA;
+    color: #000000;
     font-size: 25px;
     font-weight: 500;
     line-height: 120%;
     letter-spacing: 1px;
-    border-bottom: 1px solid #5C7CFA;
+    border-bottom: 1px solid #000000;
 }
 
 #current {
@@ -100,10 +100,10 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    border: 1px solid #5C7CFA;
+    border: 1px solid #000000;
     border-radius: 5px;
     margin: 10px 0;
-    box-shadow: 1px 1px 5px #5C7CFA;
+    box-shadow: 1px 1px 5px #000000;
 }
 
 .task__name {
@@ -111,15 +111,15 @@
     font-weight: 400;
     line-height: 120%;
     letter-spacing: 1px;
-    color: #5C7CFA;
+    color: #000000;
 }
 
 .task__button {
     background-color: inherit;
     border-radius: 5px;
-    border: 1px solid #5C7CFA;
+    border: 1px solid #000000;
     padding: 0 7px;
-    color: #5C7CFA;
+    color: #000000;
     transition: color, background-color 0.5s ease;
     font-size: 18px;
     font-weight: 400;
@@ -128,6 +128,6 @@
 }
 
 .task__button:hover {
-    background-color: #5C7CFA;
+    background-color: #000000;
     color: white;
 }
